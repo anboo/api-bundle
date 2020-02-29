@@ -96,4 +96,14 @@ class ApiResponse
     {
         return $this->errors;
     }
+    
+    public function toArray()
+    {
+        return [
+            'status' => $this->getStatus(),
+            'response' => $this->getData(),
+            'errors' => $this->getErrors(),
+            'requestId' => $this->getRequestId(),
+        ];
+    }
 }
