@@ -61,7 +61,7 @@ trait IsolatedEntityManagerTrait
      */
     public function remove($entity)
     {
-        $this->remove($entity);
+        $this->_em->remove($entity);
 
         $this->flush();
     }
