@@ -37,7 +37,7 @@ class DocumentationController
 
         $specArray = $spec->toArray();
         if ('' !== $request->getBaseUrl()) {
-            $spec['host'] = $request->server->get('HTTP_HOST');
+            $specArray['host'] = $request->server->get('HTTP_HOST');
         }
 
         return new JsonResponse($specArray);
