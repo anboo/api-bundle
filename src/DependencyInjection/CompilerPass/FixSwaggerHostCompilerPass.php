@@ -10,7 +10,7 @@ class FixSwaggerHostCompilerPass implements CompilerPassInterface
     public function process(ContainerBuilder $container)
     {
         $param = $container->getDefinition('nelmio_api_doc.describers.config')->getArgument(0);;
-        $param['host'] = '127.0.0.1';
+        $param['host'] = $_SERVER['HTTP_HOST'];
         $container->getDefinition('nelmio_api_doc.describers.config')->replaceArgument(0, $param);
     }
 }
