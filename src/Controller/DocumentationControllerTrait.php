@@ -43,23 +43,6 @@ trait DocumentationControllerTrait
             PropertyAccessor::setValueForce($api, 'paths', $pathsIterator);
         }
 
-//        /** @var Path $path */
-//        foreach ($api->getPaths() as $path) {
-//            /** @var Operation $operation */
-//            if ($operations = $path->getOperations()) {
-//                foreach ($operations as $operation) {
-//                    if ($operation->getParameters()) {
-//                        /** @var Parameter $parameter */
-//                        foreach ($operation->getParameters() as $parameter) {
-//                            if ($parameter->getSchema()) {
-//                                $parameter->getSchema()->setRef(null);
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//        }
-
         return $api;
     }
 }

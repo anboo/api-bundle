@@ -10,6 +10,7 @@ namespace Anboo\ApiBundle;
 
 use Anboo\ApiBundle\DependencyInjection\AnbooApiExtension;
 use Anboo\ApiBundle\DependencyInjection\CompilerPass\FixSerializerCompilerPass;
+use Anboo\ApiBundle\DependencyInjection\CompilerPass\FixSwaggerHostCompilerPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
@@ -28,5 +29,6 @@ class AnbooApiBundle extends Bundle
         parent::build($container);
 
         $container->addCompilerPass(new FixSerializerCompilerPass());
+        $container->addCompilerPass(new FixSwaggerHostCompilerPass());
     }
 }
