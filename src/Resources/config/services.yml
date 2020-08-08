@@ -1,10 +1,4 @@
 services:
-  Anboo\ApiBundle\Controller\SwaggerUIController:
-    arguments:
-      - '@nelmio_api_doc.generator'
-      - '@twig'
-    tags: ['controller.service_arguments']
-
   Anboo\ApiBundle\Controller\DocumentationController:
     arguments:
       - '@nelmio_api_doc.generator.default'
