@@ -14,7 +14,7 @@ namespace Anboo\ApiBundle\Swagger;
 class ApiResponse
 {
     /**
-     * @var object
+     * @var object|array
      */
     private $data;
 
@@ -38,10 +38,11 @@ class ApiResponse
      * @param array $errors
      * @return ApiResponse
      */
-    public static function createErrorResponse(string $requestId, array $errors)
+    public static function createErrorResponse(string $requestId, array $errors, ?array $data = null)
     {
         $self = new self();
 
+        $self->data = $data;
         $self->requestId = $requestId;
         $self->errors = $errors;
         $self->status = false;
