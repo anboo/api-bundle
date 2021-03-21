@@ -2,9 +2,6 @@
     "name": "anboo/api-bundle",
     "type": "library",
     "description": "Bundle for Symfony",
-    "require": {
-        "ramsey/uuid": "^3.8"
-    },
     "authors": [
         {
             "name": "anboo",
